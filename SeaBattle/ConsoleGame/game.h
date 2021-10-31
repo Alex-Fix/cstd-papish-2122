@@ -3,6 +3,8 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
+#define TEST_MODE
+
 // boolean
 #define TRUE 1
 #define FALSE 0
@@ -15,6 +17,7 @@
 #define BATTLE_CELL_STATUS_UNDEFINED 0
 #define BATTLE_CELL_STATUS_USED_IN_GAME 1
 #define BATTLE_CELL_STATUS_HITED 2
+#define BATTLE_CELL_STATUS_MISSED 3
 
 // structures
 struct battle_cell {
@@ -24,7 +27,6 @@ struct battle_cell {
 
 struct battle_field {
 	char hited_cells_count;
-	char unhited_cells_count;
 	char used_cells_count;
 	struct battle_cell cells[MAP_SIZE][MAP_SIZE];
 };
