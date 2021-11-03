@@ -12,6 +12,8 @@
 // main constants
 #define MAP_SIZE 10
 #define MAX_BATTLE_CELLS_USED_IN_GAME_COUNT 20
+#define BATTLE_FIELD_A_FILENAME "battle_field_a.dat"
+#define BATTLE_FIELD_B_FILENAME "battle_field_b.dat"
 
 // battle cell states
 #define BATTLE_CELL_STATUS_UNDEFINED 0
@@ -43,7 +45,10 @@ void main_menu();
 void start_new_game();
 void start_new_game_man_vs_man();
 void start_game_man_vs_man(struct battle_field*, struct battle_field*);
+void save(char*, struct battle_field*);
+void load(char*, struct battle_field*);
 
 // helper functions
+void reset_globals();
 
 #endif
