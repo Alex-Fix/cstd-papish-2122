@@ -36,8 +36,8 @@ void main_menu();
 void start_new_game();
 void start_new_game_man_vs_man();
 void start_game_man_vs_man(struct battle_field*, struct battle_field*);
-void save(char*, struct battle_field*);
-void load(char*, struct battle_field*);
+void save_field(char*, struct battle_field*);
+void load_field(char*, struct battle_field*);
 
 // helper functions
 void reset_globals();

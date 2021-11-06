@@ -1,4 +1,5 @@
 #include "game.h"
+#include "communication.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -67,13 +68,13 @@ void start_new_game() {
 }
 
 void start_new_game_man_vs_man() {
+	reset_globals();
+
 	struct battle_field field_a;
 	battle_field_constructor(&field_a);
 	struct battle_field field_b;
 	battle_field_constructor(&field_b);
 
-	reset_globals();
-	
 	while (QUIT != TRUE) {
 		printf("Choose action:\n");
 		printf("\t1) Fill battle field A\n");
@@ -95,8 +96,8 @@ void start_new_game_man_vs_man() {
 			init_battle_field_manualy(&field_b, "B");
 			break;
 		case '3':
-			load(BATTLE_FIELD_A_FILENAME, &field_a);
-			load(BATTLE_FIELD_B_FILENAME, &field_b);
+			load_field(BATTLE_FIELD_A_FILENAME, &field_a);
+			load_field(BATTLE_FIELD_B_FILENAME, &field_b);
 			printf("Successfully loaded\n");
 			break;
 		case '4':
@@ -303,8 +304,8 @@ void start_game_man_vs_man(struct battle_field* field_a, struct battle_field* fi
 	}
 
 	if (save_and_quit == TRUE) {
-		save(BATTLE_FIELD_A_FILENAME, field_a);
-		save(BATTLE_FIELD_B_FILENAME, field_b);
+		save_field(BATTLE_FIELD_A_FILENAME, field_a);
+		save_field(BATTLE_FIELD_B_FILENAME, field_b);
 	}
 
 	if (field_a->hited_cells_count == MAX_BATTLE_CELLS_USED_IN_GAME_COUNT) {
@@ -338,7 +339,7 @@ void reset_globals() {
 	}
 }
 
-void save(char* filename, struct battle_field* field) {
+void save_field(char* filename, struct battle_field* field) {
 	FILE* file = fopen(filename, "wb");
 	int size = sizeof(struct battle_field);
 
@@ -350,7 +351,7 @@ void save(char* filename, struct battle_field* field) {
 	fclose(file);
 }
 
-void load(char* filename, struct battle_field* field) {
+void load_field(char* filename, struct battle_field* field) {
 	FILE* file = fopen(filename, "rb");
 	int size = sizeof(struct battle_field);
 
