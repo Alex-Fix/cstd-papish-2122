@@ -3,8 +3,6 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-#define TEST_MODE
-
 // boolean
 #define TRUE 1
 #define FALSE 0
@@ -23,7 +21,6 @@
 
 // structures
 struct battle_cell {
-	char is_empty;
 	char status;
 };
 
@@ -36,9 +33,7 @@ struct battle_field {
 void battle_field_constructor(struct battle_field*);
 void init_battle_field_manualy(struct battle_field*, const char* name);
 void set_battle_field_cells_status(struct battle_field*, char);
-void set_battle_field_cells_is_empty(struct battle_field*, char);
-void print_battle_field_cells(struct battle_field*);
-void set_battle_field_cells_is_empty_using_status(struct battle_field*, char);
+void print_battle_field_cells(struct battle_field*, char);
 
 // game functions
 void main_menu();

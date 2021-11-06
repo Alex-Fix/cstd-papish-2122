@@ -12,8 +12,7 @@ void main_menu() {
 	while (QUIT != TRUE) {
 		printf("Choose action:\n");
 		printf("\t1) New game\n");
-		printf("\t2) Load game\n");
-		printf("\t3) Quit\n");
+		printf("\t2) Quit\n");
 
 		printf("Action: ");
 		(void)gets_s(ACTION, ACTION_SIZE);
@@ -24,8 +23,6 @@ void main_menu() {
 			start_new_game();
 			break;
 		case '2':
-			break;
-		case '3':
 			QUIT = TRUE;
 			break;
 		default:
@@ -81,8 +78,9 @@ void start_new_game_man_vs_man() {
 		printf("Choose action:\n");
 		printf("\t1) Fill battle field A\n");
 		printf("\t2) Fill battle field B\n");
-		printf("\t3) Start game\n");
-		printf("\t4) Quit\n");
+		printf("\t3) Load\n");
+		printf("\t4) Start game\n");
+		printf("\t5) Quit\n");
 
 		printf("Action: ");
 		(void)gets_s(ACTION, ACTION_SIZE);
@@ -97,7 +95,11 @@ void start_new_game_man_vs_man() {
 			init_battle_field_manualy(&field_b, "B");
 			break;
 		case '3':
-#ifndef TEST_MODE
+			load(BATTLE_FIELD_A_FILENAME, &field_a);
+			load(BATTLE_FIELD_B_FILENAME, &field_b);
+			printf("Successfully loaded\n");
+			break;
+		case '4':
 			if (field_a.used_cells_count < MAX_BATTLE_CELLS_USED_IN_GAME_COUNT) {
 				printf("Fill battle field A!\n");
 			}
@@ -105,17 +107,10 @@ void start_new_game_man_vs_man() {
 				printf("Fill battle field B!\n");
 			}
 			else {
-#endif
-				set_battle_field_cells_is_empty_using_status(&field_a, BATTLE_CELL_STATUS_USED_IN_GAME);
-				set_battle_field_cells_status(&field_a, BATTLE_CELL_STATUS_UNDEFINED);
-				set_battle_field_cells_is_empty_using_status(&field_b, BATTLE_CELL_STATUS_USED_IN_GAME);
-				set_battle_field_cells_status(&field_b, BATTLE_CELL_STATUS_UNDEFINED);
 				start_game_man_vs_man(&field_a, &field_b);
-#ifndef TEST_MODE
 			}
-#endif
 			break;
-		case '4':
+		case '5':
 			QUIT = TRUE;
 			break;
 		default:
@@ -146,7 +141,7 @@ void init_battle_field_manualy(struct battle_field* field, const char* name) {
 		printf("\t1) Mark as used/unused (enter {row}{column}{if used => 1 else 0} ~ 101)\n");
 		printf("\tq) Quit from editor\n\n");
 
-		print_battle_field_cells(field);
+		print_battle_field_cells(field, TRUE);
 
 		printf("Action: ");
 		(void)gets_s(ACTION, ACTION_SIZE);
@@ -182,7 +177,7 @@ void init_battle_field_manualy(struct battle_field* field, const char* name) {
 	reset_globals();
 }
 
-void print_battle_field_cells(struct battle_field* field) {
+void print_battle_field_cells(struct battle_field* field, char is_editor) {
 	printf("\t ");
 	for (int i = 0; i < MAP_SIZE; ++i) {
 		printf(" %d ", i);
@@ -198,11 +193,18 @@ void print_battle_field_cells(struct battle_field* field) {
 				printf("*");
 				break;
 			case BATTLE_CELL_STATUS_USED_IN_GAME:
-				printf("U");
+				if (is_editor == TRUE) {
+					printf("U");
+				}
+				else {
+					printf("*");
+				}
 				break;
 			case BATTLE_CELL_STATUS_HITED:
-				printf("X");
+				printf("H");
 				break;
+			case BATTLE_CELL_STATUS_MISSED:
+				printf("M");
 			}
 			printf(" ");
 		}
@@ -227,8 +229,8 @@ void start_game_man_vs_man(struct battle_field* field_a, struct battle_field* fi
 	while (
 		QUIT != TRUE 
 		&& save_and_quit != TRUE
-		&& field_a->hited_cells_count == 0 
-		&& field_b->hited_cells_count == 0
+		&& field_a->hited_cells_count < MAX_BATTLE_CELLS_USED_IN_GAME_COUNT
+		&& field_b->hited_cells_count < MAX_BATTLE_CELLS_USED_IN_GAME_COUNT
 	) {
 		printf(
 			"Player A hited %d, available %d. Player B hited %d, available %d\n",
@@ -243,10 +245,10 @@ void start_game_man_vs_man(struct battle_field* field_a, struct battle_field* fi
 		printf("\tq) Quit\n\n");
 
 		printf("Battle field A\n\n");
-		print_battle_field_cells(field_a);
+		print_battle_field_cells(field_a, FALSE);
 
 		printf("Battle field B\n\n");
-		print_battle_field_cells(field_b);
+		print_battle_field_cells(field_b, FALSE);
 
 		printf("Action (Player %c): ", player);
 		(void)gets_s(ACTION, ACTION_SIZE);
@@ -272,15 +274,14 @@ void start_game_man_vs_man(struct battle_field* field_a, struct battle_field* fi
 				continue;
 			}
 
-			if (field_a->cells[row][column].is_empty == TRUE) {
+			if (field_a->cells[row][column].status != BATTLE_CELL_STATUS_USED_IN_GAME) {
 				field_a->cells[row][column].status = BATTLE_CELL_STATUS_MISSED;
+				player = 'A';
 			}
 			else {
 				field_a->cells[row][column].status = BATTLE_CELL_STATUS_HITED;
 				++field_a->hited_cells_count;
 			}
-
-			player = 'B';
 		}
 		else if (player == 'A') {
 			if (
@@ -290,15 +291,14 @@ void start_game_man_vs_man(struct battle_field* field_a, struct battle_field* fi
 				continue;
 			}
 
-			if (field_b->cells[row][column].is_empty == TRUE) {
+			if (field_b->cells[row][column].status != BATTLE_CELL_STATUS_USED_IN_GAME) {
 				field_b->cells[row][column].status = BATTLE_CELL_STATUS_MISSED;
+				player = 'B';
 			}
 			else {
 				field_b->cells[row][column].status = BATTLE_CELL_STATUS_HITED;
 				++field_b->hited_cells_count;
 			}
-
-			player = 'A';
 		}
 	}
 
@@ -307,13 +307,19 @@ void start_game_man_vs_man(struct battle_field* field_a, struct battle_field* fi
 		save(BATTLE_FIELD_B_FILENAME, field_b);
 	}
 
+	if (field_a->hited_cells_count == MAX_BATTLE_CELLS_USED_IN_GAME_COUNT) {
+		printf("Player A wins!!!\n");
+	}
+	if (field_b->hited_cells_count == MAX_BATTLE_CELLS_USED_IN_GAME_COUNT) {
+		printf("Player B wins!!!\n");
+	}
+
 	reset_globals();
 }
 
 void battle_field_constructor(struct battle_field* field) {
 	field->hited_cells_count = 0;
 	field->used_cells_count = 0;
-	set_battle_field_cells_is_empty(field, TRUE);
 	set_battle_field_cells_status(field, BATTLE_CELL_STATUS_UNDEFINED);
 }
 
@@ -321,22 +327,6 @@ void set_battle_field_cells_status(struct battle_field* field, char status) {
 	for (char i = 0; i < MAP_SIZE; ++i) {
 		for (char j = 0; j < MAP_SIZE; ++j) {
 			field->cells[i][j].status = status;
-		}
-	}
-}
-
-void set_battle_field_cells_is_empty(struct battle_field* field, char is_empty) {
-	for (char i = 0; i < MAP_SIZE; ++i) {
-		for (char j = 0; j < MAP_SIZE; ++j) {
-			field->cells[i][j].is_empty = is_empty;
-		}
-	}
-}
-
-void set_battle_field_cells_is_empty_using_status(struct battle_field* field, char status) {
-	for (char i = 0; i < MAP_SIZE; ++i) {
-		for (char j = 0; j < MAP_SIZE; ++j) {
-			field->cells[i][j].is_empty = field->cells[i][j].status == status ? TRUE : FALSE;
 		}
 	}
 }
@@ -361,7 +351,7 @@ void save(char* filename, struct battle_field* field) {
 }
 
 void load(char* filename, struct battle_field* field) {
-	FILE* file = fopen(filename, "wb");
+	FILE* file = fopen(filename, "rb");
 	int size = sizeof(struct battle_field);
 
 	char* ch = (char*)field;
