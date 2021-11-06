@@ -20,14 +20,10 @@
 #define BATTLE_CELL_STATUS_MISSED 3
 
 // structures
-struct battle_cell {
-	char status;
-};
-
 struct battle_field {
 	char hited_cells_count;
 	char used_cells_count;
-	struct battle_cell cells[MAP_SIZE][MAP_SIZE];
+	char cells_statuses[MAP_SIZE][MAP_SIZE];
 };
 
 void battle_field_constructor(struct battle_field*);

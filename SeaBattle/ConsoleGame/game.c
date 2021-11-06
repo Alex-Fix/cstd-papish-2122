@@ -159,17 +159,17 @@ void init_battle_field_manualy(struct battle_field* field, const char* name) {
 		if (
 			used_in_game 
 			&& field->used_cells_count < MAX_BATTLE_CELLS_USED_IN_GAME_COUNT
-			&& field->cells[row][column].status == BATTLE_CELL_STATUS_UNDEFINED
+			&& field->cells_statuses[row][column] == BATTLE_CELL_STATUS_UNDEFINED
 		) {
-			field->cells[row][column].status = BATTLE_CELL_STATUS_USED_IN_GAME;
+			field->cells_statuses[row][column] = BATTLE_CELL_STATUS_USED_IN_GAME;
 			++field->used_cells_count;
 		}
 		else if(
 			!used_in_game 
 			&& field->used_cells_count > 0
-			&& field->cells[row][column].status == BATTLE_CELL_STATUS_USED_IN_GAME
+			&& field->cells_statuses[row][column] == BATTLE_CELL_STATUS_USED_IN_GAME
 		) {
-			field->cells[row][column].status = BATTLE_CELL_STATUS_UNDEFINED;
+			field->cells_statuses[row][column] = BATTLE_CELL_STATUS_UNDEFINED;
 			--field->used_cells_count;
 		}
 	}
@@ -188,7 +188,7 @@ void print_battle_field_cells(struct battle_field* field, char is_editor) {
 		printf("\t%d", i);
 		for (int j = 0; j < MAP_SIZE; ++j) {
 			printf(" ");
-			switch (field->cells[i][j].status) {
+			switch (field->cells_statuses[i][j]) {
 			case BATTLE_CELL_STATUS_UNDEFINED: 
 				printf("*");
 				break;
@@ -268,35 +268,35 @@ void start_game_man_vs_man(struct battle_field* field_a, struct battle_field* fi
 
 		if (player == 'B') {
 			if (
-				field_a->cells[row][column].status == BATTLE_CELL_STATUS_HITED
-				|| field_a->cells[row][column].status == BATTLE_CELL_STATUS_MISSED
+				field_a->cells_statuses[row][column] == BATTLE_CELL_STATUS_HITED
+				|| field_a->cells_statuses[row][column] == BATTLE_CELL_STATUS_MISSED
 			) {
 				continue;
 			}
 
-			if (field_a->cells[row][column].status != BATTLE_CELL_STATUS_USED_IN_GAME) {
-				field_a->cells[row][column].status = BATTLE_CELL_STATUS_MISSED;
+			if (field_a->cells_statuses[row][column] != BATTLE_CELL_STATUS_USED_IN_GAME) {
+				field_a->cells_statuses[row][column] = BATTLE_CELL_STATUS_MISSED;
 				player = 'A';
 			}
 			else {
-				field_a->cells[row][column].status = BATTLE_CELL_STATUS_HITED;
+				field_a->cells_statuses[row][column] = BATTLE_CELL_STATUS_HITED;
 				++field_a->hited_cells_count;
 			}
 		}
 		else if (player == 'A') {
 			if (
-				field_b->cells[row][column].status == BATTLE_CELL_STATUS_HITED
-				|| field_b->cells[row][column].status == BATTLE_CELL_STATUS_MISSED
+				field_b->cells_statuses[row][column] == BATTLE_CELL_STATUS_HITED
+				|| field_b->cells_statuses[row][column] == BATTLE_CELL_STATUS_MISSED
 				) {
 				continue;
 			}
 
-			if (field_b->cells[row][column].status != BATTLE_CELL_STATUS_USED_IN_GAME) {
-				field_b->cells[row][column].status = BATTLE_CELL_STATUS_MISSED;
+			if (field_b->cells_statuses[row][column] != BATTLE_CELL_STATUS_USED_IN_GAME) {
+				field_b->cells_statuses[row][column] = BATTLE_CELL_STATUS_MISSED;
 				player = 'B';
 			}
 			else {
-				field_b->cells[row][column].status = BATTLE_CELL_STATUS_HITED;
+				field_b->cells_statuses[row][column] = BATTLE_CELL_STATUS_HITED;
 				++field_b->hited_cells_count;
 			}
 		}
@@ -326,7 +326,7 @@ void battle_field_constructor(struct battle_field* field) {
 void set_battle_field_cells_status(struct battle_field* field, char status) {
 	for (char i = 0; i < MAP_SIZE; ++i) {
 		for (char j = 0; j < MAP_SIZE; ++j) {
-			field->cells[i][j].status = status;
+			field->cells_statuses[i][j] = status;
 		}
 	}
 }
