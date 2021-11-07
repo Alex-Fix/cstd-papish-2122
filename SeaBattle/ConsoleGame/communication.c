@@ -111,6 +111,7 @@ void set_hited_cells_count(char field, char value) {
     WRITE_BUFFER[PACKET_EOP_POS] = PACKET_EOP;
 
     write_port();
+    read_port();
 }
 
 char get_used_cells_count(char field) {
@@ -138,6 +139,7 @@ void set_used_cells_count(char field, char value) {
     WRITE_BUFFER[PACKET_EOP_POS] = PACKET_EOP;
 
     write_port();
+    read_port();
 }
 
 char get_cell_status(char field, char row, char column) {
@@ -165,4 +167,5 @@ void set_cell_status(char field, char row, char column, char value) {
     WRITE_BUFFER[PACKET_EOP_POS] = PACKET_EOP;
 
     write_port();
+    read_port();
 }
