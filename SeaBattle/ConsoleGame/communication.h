@@ -24,10 +24,6 @@
 #define PACKET_SOP 0xFC
 #define PACKET_EOP 0xFE
 
-// command statuses
-#define CMD_STATUS_DONE 0xFD
-#define CMD_STATUS_FAIL 0xFF
-
 // commands
 #define CMD_GET_HITED_CELLS_COUNT 0
 #define CMD_SET_HITED_CELLS_COUNT 1

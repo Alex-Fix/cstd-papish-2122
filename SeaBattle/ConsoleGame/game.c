@@ -157,7 +157,7 @@ void init_battle_field_manualy(char field, const char* name) {
 			&& get_used_cells_count(field) < MAX_BATTLE_CELLS_USED_IN_GAME_COUNT
 			&& get_cell_status(field, row, column) == BATTLE_CELL_STATUS_UNDEFINED
 		) {
-			get_cell_status(field, row, column, BATTLE_CELL_STATUS_USED_IN_GAME);
+			set_cell_status(field, row, column, BATTLE_CELL_STATUS_USED_IN_GAME);
 			set_used_cells_count(field, get_used_cells_count(field) + 1);
 		}
 		else if(
@@ -165,7 +165,7 @@ void init_battle_field_manualy(char field, const char* name) {
 			&& get_used_cells_count(field) > 0
 			&& get_cell_status(field, row, column) == BATTLE_CELL_STATUS_USED_IN_GAME
 		) {
-			get_cell_status(field, row, column, BATTLE_CELL_STATUS_UNDEFINED);
+			set_cell_status(field, row, column, BATTLE_CELL_STATUS_UNDEFINED);
 			set_used_cells_count(field, get_used_cells_count(field) - 1);
 		}
 	}
