@@ -1,7 +1,7 @@
 #ifndef GAME_HEADER_FILE
 #define GAME_HEADER_FILE
 
-#define _CRT_SECURE_NO_WARNINGS
+#include "communication.h"
 
 // boolean
 #define TRUE 1
@@ -18,6 +18,11 @@
 #define BATTLE_CELL_STATUS_USED_IN_GAME 1
 #define BATTLE_CELL_STATUS_HITED 2
 #define BATTLE_CELL_STATUS_MISSED 3
+
+// global variables
+#define ACTION_SIZE 5
+char ACTION[ACTION_SIZE];
+char QUIT;
 
 // structures
 struct battle_field {

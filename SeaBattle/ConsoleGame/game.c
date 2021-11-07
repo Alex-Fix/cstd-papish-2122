@@ -1,14 +1,9 @@
 #include "game.h"
-#include "communication.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-#define ACTION_SIZE 5
-char ACTION[ACTION_SIZE] = { 0, 0, 0, 0, 0 };
-char QUIT = FALSE;
 
 void main_menu() {
 	reset_globals();
+
+	open_serial_port();
 
 	while (QUIT != TRUE) {
 		printf("Choose action:\n");
@@ -30,6 +25,8 @@ void main_menu() {
 			printf("Invalid action: %s\n", ACTION);
 		}
 	}
+
+	CloseHandle(PORT);
 
 	reset_globals();
 }
