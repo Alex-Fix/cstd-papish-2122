@@ -1,0 +1,6 @@
+D:\CSDT\cstd-papish-2122\SeaBattleServerSideWorkspace\SeaBattleServerSide.cydsn\SeaBattleServerSide.cyprj|77a8de10-6f34-43df-bb1c-8875979a3e9a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|99a82f6a-a863-4a56-9891-e5f1e58ae799
+C:\Users\Alex Fix\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|707d3c49-29dd-4604-929b-9b5db7e0feb1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c328aefa-2568-4c25-b367-13f7f9989687
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|508c19c4-cb04-4c2c-9caf-4a8bd2e58899
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|94f829b4-38af-478e-9004-24c48c4d03a8

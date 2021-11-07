@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SeaBattleServerSideWorkspace\SeaBattleServerSide\TopDesign">
+<ExpandedNodeIds>
+<v>SeaBattleServerSideWorkspace</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\TopDesign</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Pins</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Analog</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Clocks</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Interrupts</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\System</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Directives</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Flash Security</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Header Files</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Header Files\cyapicallbacks.h</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Source Files</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Source Files\main.c</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SeaBattleServerSideWorkspace</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\TopDesign</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Pins</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Analog</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Clocks</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Interrupts</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\System</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Directives</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.cydwr\Flash Security</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Header Files</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Header Files\cyapicallbacks.h</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Source Files</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Source Files\main.c</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cy_boot</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cy_lfclk</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\I2CS</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\I2CS_SCB_IRQ</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\I2CS_SCBCLK</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\I2CS_scl</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\I2CS_sda</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cycodeshareimport.ld</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cycodeshareimport.scat</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cyfitter.h</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SeaBattleServerSideWorkspace</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\TopDesign</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SeaBattleServerSideWorkspace</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\TopDesign</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SeaBattleServerSideWorkspace</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_BOOT.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_BOOT.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_INT.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_SLAVE.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_PM.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_SCB_IRQ.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_SCBCLK.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_scl.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_scl_PM.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_sda.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_sda_PM.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\SeaBattleServerSide.elf</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\SeaBattleServerSide.hex</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\SeaBattleServerSide.map</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.gpdsc</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.rpt</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SeaBattleServerSideWorkspace</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_BOOT.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_BOOT.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_INT.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_SLAVE.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_PM.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_SCB_IRQ.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_SCBCLK.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_scl.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_scl_PM.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_sda.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_sda_PM.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\SeaBattleServerSide.elf</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\SeaBattleServerSide.hex</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\CortexM0\ARM_GCC_541\Debug\SeaBattleServerSide.map</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.gpdsc</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide.rpt</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SeaBattleServerSide_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SeaBattleServerSideWorkspace</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\PSoC 4 Architecture TRM</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\PSoC 4200 Family Datasheet</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\System Reference Guides</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\System Reference Guides\cy_boot_v6_0</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\System Reference Guides\cy_lfclk_v1_20</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SCB_P4_v4_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SeaBattleServerSideWorkspace</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\PSoC 4 Architecture TRM</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\PSoC 4200 Family Datasheet</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\System Reference Guides</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\System Reference Guides\cy_boot_v6_0</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\System Reference Guides\cy_lfclk_v1_20</v>
+<v>SeaBattleServerSideWorkspace\SeaBattleServerSide\SCB_P4_v4_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\SeaBattleServerSide.cydsn\SeaBattleServerSide.cydwr" />
+<name v=".\SeaBattleServerSide.cydsn\main.c" />
+<name v=".\SeaBattleServerSide.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1078, 492" SelectedTabbedMdiWindow="8bc52003-6bb4-4972-871d-6918a9eee6c8"><DocumentWindow Key="D:\CSDT\cstd-papish-2122\SeaBattleServerSideWorkspace\SeaBattleServerSide.cydsn\SeaBattleServerSide.cydwr" Guid="968dd263-ad23-4af7-b304-471521779658" /><DocumentWindow Key="D:\CSDT\cstd-papish-2122\SeaBattleServerSideWorkspace\SeaBattleServerSide.cydsn\main.c" Guid="8bc52003-6bb4-4972-871d-6918a9eee6c8" /><DocumentWindow Key="D:\CSDT\cstd-papish-2122\SeaBattleServerSideWorkspace\SeaBattleServerSide.cydsn\TopDesign\TopDesign.cysch" Guid="743f61ab-f9b1-4540-b114-dc2c58ffedb4" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
