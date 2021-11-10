@@ -11,7 +11,7 @@ void main_menu() {
 		printf("\t2) Quit\n");
 
 		printf("Action: ");
-		(void)gets_s(ACTION, ACTION_SIZE);
+		(void)gets(ACTION);
 		(void)system("cls");
 
 		switch (ACTION[0]) {
@@ -42,7 +42,7 @@ void start_new_game() {
 		printf("\t 4) Quit\n");
 
 		printf("Action: ");
-		(void)gets_s(ACTION, ACTION_SIZE);
+		(void)gets(ACTION);
 		(void)system("cls");
 
 		switch (ACTION[0]) {
@@ -79,7 +79,7 @@ void start_new_game_man_vs_man() {
 		printf("\t5) Quit\n");
 
 		printf("Action: ");
-		(void)gets_s(ACTION, ACTION_SIZE);
+		(void)gets(ACTION);
 		(void)system("cls");
 
 		switch (ACTION[0])
@@ -140,7 +140,7 @@ void init_battle_field_manualy(char field, const char* name) {
 		print_battle_field_cells(field, TRUE);
 
 		printf("Action: ");
-		(void)gets_s(ACTION, ACTION_SIZE);
+		(void)gets(ACTION);
 		(void)system("cls");
 
 		if (ACTION[0] == 'q') {
@@ -247,7 +247,7 @@ void start_game_man_vs_man() {
 		print_battle_field_cells(FIELD_B, FALSE);
 
 		printf("Action (Player %c): ", player);
-		(void)gets_s(ACTION, ACTION_SIZE);
+		(void)gets(ACTION);
 		(void)system("cls");
 
 		if (ACTION[0] == 's') {
@@ -334,7 +334,7 @@ void reset_globals() {
 	}
 }
 
-void save_field(char* filename, struct battle_field* field) {
+void save_field(char* filename, char field) {
 	FILE* file = fopen(filename, "wb");
 
 	putc(get_used_cells_count(field), file);
