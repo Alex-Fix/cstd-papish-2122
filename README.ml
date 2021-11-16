@@ -17,3 +17,11 @@ How to build project:
 
 	Detailed information is located in HowToRun.pdf
 
+How to build and run tests:
+	Project contains 4 tests:
+		a) Unit tests;
+		b) Integration tests;
+		c) Automation tests;
+		d) Manual tests;
+
+	Detailed information is located in HowToRun.pdf
