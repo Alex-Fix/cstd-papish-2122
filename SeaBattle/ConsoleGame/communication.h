@@ -37,7 +37,7 @@
 #define FIELD_B 1
 
 // helper defines
-#define DEVICE "\\\\.\\COM6"
+#define DEVICE "\\\\.\\COM5"
 #define BOUD_RATE 9600
 
 // global variables
