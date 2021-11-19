@@ -24,6 +24,12 @@
     <ClCompile Include="communication.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="integration_tests.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unit_tests.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -32,9 +38,15 @@
     <ClInclude Include="communication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="acutest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="makeit.bat">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="automation_tests.bat">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
