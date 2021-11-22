@@ -25,3 +25,6 @@ How to build and run tests:
 		d) Manual tests;
 
 	Detailed information is located in HowToRun.pdf
+
+Status of Last CI:<br>
+<img src="https://github.com/Alex-Fix/cstd-papish-2122/workflows/CI-on-push/badge.svg?branch=feature/papish/develop"><br>

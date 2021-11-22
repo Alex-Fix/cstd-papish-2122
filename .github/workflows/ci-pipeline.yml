@@ -10,13 +10,13 @@ jobs:
   CI_part:
     runs-on: windows-2016
     env:
-      ROOT_FOLDER: "/SeaBattle/ConsoleGame"
+      ROOT_FOLDER: "SeaBattle/ConsoleGame"
     steps:
      - name: Cloning repository
        uses: actions/checkout@v2
        with:
          submodules: true
-
+         
      - name: Building executable
        run: |
          cd ${{ env.ROOT_FOLDER }}
