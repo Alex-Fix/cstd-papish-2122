@@ -1,0 +1,45 @@
+name: CI-on-push
+
+on:
+  push: 
+    branches: 
+     - "develop"
+     - "feature/papish/develop"
+     
+jobs:
+  CI_part:
+    runs-on: windows-2016
+    env:
+      ROOT_FOLDER: "/SeaBattle/ConsoleGame"
+    steps:
+     - name: Cloning repository
+       uses: actions/checkout@v2
+       with:
+         submodules: true
+
+     - name: Building executable
+       run: |
+         cd ${{ env.ROOT_FOLDER }}
+         gcc -c main.c communication.c game.c
+         gcc -o main main.o communication.o game.o
+         
+     - name: Building unit tests
+       run: |
+         cd ${{ env.ROOT_FOLDER }}
+         gcc -c game.c communication.c unit_tests.c
+         gcc -o unit_tests game.o communication.o unit_tests.o
+         
+     - name: Building integration tests
+       run: |
+         cd ${{ env.ROOT_FOLDER }}
+         gcc -c communication.c integration_tests.c
+         gcc -o integration_tests communication.o integration_tests.o
+     
+     - uses: actions/upload-artifact@v2
+       with:
+         name: artifacts
+         path: |
+           ${{ env.ROOT_FOLDER }}/main.exe
+           ${{ env.ROOT_FOLDER }}/unit_tests.exe
+           ${{ env.ROOT_FOLDER }}/integration_tests.exe
+           ${{ env.ROOT_FOLDER }}/automation_tests.bat
