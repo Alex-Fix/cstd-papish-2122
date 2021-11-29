@@ -26,5 +26,8 @@ How to build and run tests:
 
 	Detailed information is located in HowToRun.pdf
 
+Created tags: 
+	1) cstd-papish-2122_1.0.0_4821480
+
 Status of Last CI:<br>
 <img src="https://github.com/Alex-Fix/cstd-papish-2122/workflows/CI-on-push/badge.svg?branch=feature/papish/develop"><br>
